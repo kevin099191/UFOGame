@@ -1,68 +1,66 @@
 ﻿using UnityEngine;
-using System.Collections;
+
 
 public class EMove : MonoBehaviour
 {
-    public GameObject[] Elv = new GameObject[9];
-    public float Elv_speed;
-    public int s=3;
+    
+    public float speed=5;
+    public int A;
 
+    
 
+    
 
-    private void Move()
+    private void ReMove()
     {
-        //GameObject GB = Elv[Random.Range(0,9)];
-        //GB.transform.localPosition = Vector3.MoveTowards(GB.transform.localPosition, new Vector3(GB.transform.localPosition.x, -0.5f, GB.transform.localPosition.z), Elv_speed*Time.deltaTime);
-
-        Elv[8].transform.localPosition = Vector3.MoveTowards(Elv[8].transform.localPosition, new Vector3(Elv[8].transform.localPosition.x, -0.5f, Elv[8].transform.localPosition.z), Elv_speed * Time.deltaTime);
-
-
-
-        //Elv[Random.Range(1,9)].transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(10, -3, 50), Elv_speed);
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
+        ///gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(gameObject.transform.localPosition.x, -25f, gameObject.transform.localPosition.z), Elv_speed * Time.deltaTime);
     }
-
-
 
 
     
 
-    private IEnumerator RandomMove()
+    private void Move()
     {
-        for (int i = 0; i < Elv.Length; i++)
+
+        /// gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(gameObject.transform.localPosition.x, -0.5f, gameObject.transform.localPosition.z), Elv_speed * Time.deltaTime);
+
+        A++;
+        if (A<500)
         {
-            Elv[i].transform.localPosition = Vector3.MoveTowards(Elv[i].transform.localPosition, new Vector3(Elv[i].transform.localPosition.x, -0.5f, Elv[i].transform.localPosition.z), Elv_speed * Time.deltaTime);
-
-            yield return new WaitForSeconds(s);
-
-            Elv[i].transform.localPosition = Vector3.MoveTowards(Elv[i].transform.localPosition, new Vector3(Elv[i].transform.localPosition.x, -25.0f, Elv[i].transform.localPosition.z), Elv_speed * Time.deltaTime);
-
-            
-
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + speed * Time.deltaTime, gameObject.transform.position.z);
         }
 
+        if (A > 500 && A < 800)
+        {
+            speed = 0;
+        }
+
+        if (A>800)
+        {
+            speed = 5;
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y  -  speed * Time.deltaTime, gameObject.transform.position.z);
+        }
+        
+        if (A>1300)
+        {
+            A = 0;
+        }
+
+
+
+
+   
+
+
+
+
     }
-
-
-
+    
 
     private void Update()
     {
-        StartCoroutine(RandomMove());
+        Move();
+      
     }
 
 
@@ -81,7 +79,7 @@ public class EMove : MonoBehaviour
 
     private void Start()
     {
-        Elv = GameObject.FindGameObjectsWithTag("電梯");
+        
 
         
     }
