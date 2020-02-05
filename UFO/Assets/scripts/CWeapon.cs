@@ -16,7 +16,7 @@ public class CWeapon : MonoBehaviour
 
     private void Start()
     {
-        //point = GameObject.FindGameObjectsWithTag("生成武器點");
+        ///point = GameObject.FindGameObjectsWithTag("生成武器點");
        
     }
 
