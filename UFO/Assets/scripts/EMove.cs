@@ -45,7 +45,7 @@ public class EMove : MonoBehaviour
         
         if (A>13)
         {
-            A = 0;
+            Destroy(this);
         }
 
 

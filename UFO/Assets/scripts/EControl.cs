@@ -2,12 +2,12 @@
 
 using UnityEngine;
 
-public class EControl : EMove
+public class EControl : MonoBehaviour
 {
     public GameObject[] Elv = new GameObject[9];
+    public GameObject[] point = new GameObject[9];
 
-
-
+    public GameObject emenyBoy;
 
 
 
@@ -16,17 +16,14 @@ public class EControl : EMove
     {
         for (int j = 0; j < 500; j++)
         {
-            int i = Random.Range(1, 10);
-
-            GameObject.Find("電梯[i]").GetComponent<EMove>().enabled = true;
-
+            
+            int i = Random.Range(0, 9);
 
             
-
-            if (A>13)
-            {
-                GameObject.Find("電梯[i]").GetComponent<EMove>().enabled = false;
-            }
+            Elv[i].AddComponent<EMove>();
+            Vector3 p = point[i].transform.position;
+            Instantiate(emenyBoy , p , Quaternion.identity);
+            
 
             yield return new WaitForSeconds(3);
 
@@ -43,6 +40,7 @@ public class EControl : EMove
     private void Start()
     {
         Elv = GameObject.FindGameObjectsWithTag("電梯");
+        point = GameObject.FindGameObjectsWithTag("敵人點");
         StartCoroutine(Ct());
     }
 
