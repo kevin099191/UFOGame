@@ -22,7 +22,7 @@ public class EControl : MonoBehaviour
             
             Elv[i].AddComponent<EMove>();
             Vector3 p = point[i].transform.position;
-            Instantiate(emenyBoy , p , Quaternion.identity);
+            Instantiate(emenyBoy , p , new Quaternion(0, 180, 0, 0));
             
 
             yield return new WaitForSeconds(3);
