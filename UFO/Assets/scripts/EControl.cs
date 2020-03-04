@@ -7,8 +7,8 @@ public class EControl : MonoBehaviour
     public GameObject[] Elv = new GameObject[9];
     public GameObject[] point = new GameObject[9];
     public GameObject[] player = new GameObject[2];
-    
-
+   
+    private Screan Sc;
 
 
 
@@ -16,6 +16,12 @@ public class EControl : MonoBehaviour
     {
         for (int j = 0; j < 500; j++)
         {
+            
+            
+              
+            
+            
+
             
             int i = Random.Range(0, 9);
 
@@ -43,7 +49,11 @@ public class EControl : MonoBehaviour
         Elv = GameObject.FindGameObjectsWithTag("電梯");
         point = GameObject.FindGameObjectsWithTag("敵人點");
         StartCoroutine(Ct());
+        Sc = FindObjectOfType<Screan>();
+
     }
+
+
 
 
 

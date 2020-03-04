@@ -7,7 +7,13 @@ public class Enemy : MonoBehaviour
     private float[] enemysDistance;
     public GameObject ex;
     public GameObject blood;
-   
+
+    
+
+    private void Start()
+    {
+      
+    }
 
     private void Move()
     {
@@ -51,7 +57,6 @@ public class Enemy : MonoBehaviour
             Destroy(Blood, 5f);
 
             
-
         }
 
 

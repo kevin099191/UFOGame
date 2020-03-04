@@ -10,13 +10,13 @@ public class CWeapon : MonoBehaviour
     public int bulletNum = 6;
 
     public GameObject[] bullet;
-
+    public GameObject Ed;
 
 
 
     private void Start()
     {
-        bullet = GameObject.FindGameObjectsWithTag("飛彈圖");
+       /// bullet = GameObject.FindGameObjectsWithTag("飛彈圖");
         bulletNum = 6;
     }
 
@@ -85,6 +85,20 @@ public class CWeapon : MonoBehaviour
             bullet[3].SetActive(false);
             bullet[4].SetActive(false);
             bullet[5].SetActive(false);
+
+
+            Ed.SetActive(true);
+
+
+
+
+
+
+
+
+
+
+
         }
 
 
