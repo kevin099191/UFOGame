@@ -11,10 +11,7 @@ public class EMove : MonoBehaviour
 
     
 
-    private void ReMove()
-    {
-        ///gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(gameObject.transform.localPosition.x, -25f, gameObject.transform.localPosition.z), Elv_speed * Time.deltaTime);
-    }
+   
 
 
     
@@ -22,9 +19,7 @@ public class EMove : MonoBehaviour
     private void Move()
     {
 
-        /// gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(gameObject.transform.localPosition.x, -0.5f, gameObject.transform.localPosition.z), Elv_speed * Time.deltaTime);
-        ///int RandomValue = Random.Range(1, 200);
-        ///Invoke("Move", RandomValue);
+        
 
         A += Time.deltaTime; 
         if (A<5)

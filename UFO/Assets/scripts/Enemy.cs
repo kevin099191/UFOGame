@@ -5,8 +5,9 @@ public class Enemy : MonoBehaviour
 {
     private EMove[] enemys;
     private float[] enemysDistance;
-
-
+    public GameObject ex;
+    public GameObject blood;
+   
 
     private void Move()
     {
@@ -30,14 +31,55 @@ public class Enemy : MonoBehaviour
 
         Vector3 posEnemy = enemys[index].transform.position;
 
-        transform.position = new Vector3(posEnemy.x, posEnemy.y + 2, posEnemy.z);
+        transform.position = new Vector3(posEnemy.x, posEnemy.y + 3, posEnemy.z);
 
 
 
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag =="飛碟")
+        {
+            
+
+            GameObject effect =  Instantiate(ex , transform.position , Quaternion.identity);
+           
+            GameObject Blood = Instantiate(blood, transform.position, blood.transform.rotation);
+            Destroy(gameObject);
+            Destroy(effect, 2f);
+            Destroy(Blood, 5f);
+
+            
+
+        }
+
+
+
+    }
+
+
 
     private void FixedUpdate()
     {
         Move();
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -8,6 +8,10 @@ TagManager:
   - "\u751F\u6210\u6B66\u5668\u9EDE"
   - "\u98DB\u789F"
   - "\u6575\u4EBA\u9EDE"
+  - "\u98DB\u5F48\u5716"
+  - "\u6575\u4EBA"
+  - "\u7537\u5B69"
+  - "\u5973\u5B69"
   layers:
   - Default
   - TransparentFX

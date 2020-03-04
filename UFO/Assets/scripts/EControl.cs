@@ -6,8 +6,8 @@ public class EControl : MonoBehaviour
 {
     public GameObject[] Elv = new GameObject[9];
     public GameObject[] point = new GameObject[9];
-
-    public GameObject emenyBoy;
+    public GameObject[] player = new GameObject[2];
+    
 
 
 
@@ -22,10 +22,11 @@ public class EControl : MonoBehaviour
             
             Elv[i].AddComponent<EMove>();
             Vector3 p = point[i].transform.position;
-            Instantiate(emenyBoy , p , new Quaternion(0, 180, 0, 0));
-            
+            int rp = Random.Range(0 ,2);
+            GameObject S = Instantiate(player[rp], p  , new Quaternion(0, 180, 0, 0));
+            Destroy(S, 13);
 
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(6);
 
         }
        
