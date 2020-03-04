@@ -29,7 +29,8 @@ public class EControl : MonoBehaviour
             Elv[i].AddComponent<EMove>();
             Vector3 p = point[i].transform.position;
             int rp = Random.Range(0 ,2);
-            GameObject S = Instantiate(player[rp], p  , new Quaternion(0, 180, 0, 0));
+            GameObject S = Instantiate(player[rp], Elv[i].transform.GetChild(1).transform.position  , new Quaternion(0, 180, 0, 0));
+            S.transform.SetParent(Elv[i].transform);
             Destroy(S, 13);
 
             yield return new WaitForSeconds(6);

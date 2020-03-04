@@ -75,19 +75,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9984}
     - Class: 114
-      Script: {instanceID: 10224}
+      Script: {instanceID: 10028}
     - Class: 114
-      Script: {instanceID: 10484}
+      Script: {instanceID: 10226}
     - Class: 114
-      Script: {instanceID: 10810}
+      Script: {instanceID: 10486}
     - Class: 114
-      Script: {instanceID: 10824}
+      Script: {instanceID: 10812}
     - Class: 114
-      Script: {instanceID: 10966}
+      Script: {instanceID: 10826}
     - Class: 114
-      Script: {instanceID: 11300}
+      Script: {instanceID: 10968}
     - Class: 114
-      Script: {instanceID: 11578}
+      Script: {instanceID: 11302}
+    - Class: 114
+      Script: {instanceID: 11580}
     - Class: 114
       Script: {instanceID: 11842}
     - Class: 114
@@ -100,8 +102,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 12060}
     - Class: 114
       Script: {instanceID: 12130}
-    - Class: 114
-      Script: {instanceID: 40136}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,6 +225,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.ProBuilder.dll
     namespaceName: UnityEngine.ProBuilder
     className: PolyShape
+  - hash:
+      serializedVersion: 2
+      Hash: 5b58cf39a8b56d253d48dbdecb4c01cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Screan
   - hash:
       serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
@@ -705,12 +711,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 5b58cf39a8b56d253d48dbdecb4c01cd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Screan
   platform: 5
   scenePathNames:
   - "Assets/Scenes/\u904A\u6232.unity"
